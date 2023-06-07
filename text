@@ -1,0 +1,59 @@
+Homework -------------------------------------------------------------------
+
+
+
+-- Create table yaratildi
+
+create table if not exists student(
+
+    id serial primary key ,
+    first_name varchar(100),
+    last_name varchar(100),
+    phone_number varchar(20),
+    email varchar(35),
+    address varchar,
+    level int
+
+);
+
+-- Tablega ma'lumotlar qo'shish
+
+insert into student(first_name, last_name, phone_number, email, address, level)
+values ('Oxunjon','Abdullayev','+998909878987','oxun@gmail.com','Karshi',2),
+        ('Sobir','Aliyev','+99890977343','sobirjon@gmail.ru ',' Andijan ',1),
+        ('dilshod','samadov','+998909034543',' dilshod@gmail.ru' , ' Karshi',4),
+        ('Samandar','Rahimov','+998909011189','Samandar@gmail.ru' , ' Karshi ', 3);
+
+
+-- Tabledagi hamma ma'lumotlarni ko'rish
+
+select * from student;
+
+
+--  Tabledan biror bir foydalanuvchini olish
+
+select * from student where id=1;
+
+
+--  Tabledagi biror bir foydalanuvchini o'chirish
+
+delete from student where id=1;
+delete from student where first_name='Oxunjon';
+
+
+
+-- Tabledagi fuqaroni ma'lumotlarini o'zgartirish
+
+
+update student set first_name='Akmaljon' where id=3;
+update student set last_name='Malikov' where id=3;
+
+
+
+
+
+
+Homework -------------------------------------------------------------------
+
+
+
